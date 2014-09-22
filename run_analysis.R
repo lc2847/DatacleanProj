@@ -35,14 +35,14 @@ data <- ldply(data.filename, read.table)
 label <- read.table("UCI HAR Dataset/features.txt")[, 2]
 colnames(data) <- label
 
-
 # Extract activity id and corresponding label
 activity.filename = c("UCI HAR Dataset/train/y_train.txt", "UCI HAR Dataset/test/y_test.txt")
 activity <- ldply(activity.filename, read.table)
 colnames(activity) <- c("activity_id")
 
 activity.label <- read.table("UCI HAR Dataset/activity_labels.txt", col.names=c("activity_id", "activity_label"))
-activity <- merge(activity, activity.label)
+activity$activity_label <- apply(activity, 1,function(x) activity.label[x,2] )
+
 # add it to data
 data$activity_label <- activity$activity_label
 
