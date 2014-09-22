@@ -6,4 +6,4 @@ To use this script, run it in R-Studio
 
 source("run_analysis.R")
 
-A variable called "tidy" and a file tidy.txt will be created. See the comment in run_analysis.R for additional help.
+A variable called "tidy" and a file tidy.txt will be created. See the comment in run_analysis.R and Codebook.txt for additional explainations.
