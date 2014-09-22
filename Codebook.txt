@@ -1,0 +1,17 @@
+Codebook for Variables
+
+dataDir - Directory to store downloaded data file
+zipFilePath - downloaded file name
+dataSetDir - directory to store unziped files from the downloaded data file
+
+data - a data frame of the dataset combined train and test datasets
+label - read from features.txt dataset
+activity - data frame with 6 activities, 30 activity ids
+subject - data frame readed from subject_train.txt. 30 ids
+
+Find_Mean_Std function - Extracting those colnames which contains "std()" and "mean()" from the data file
+
+mean_std_data - data frame with all observations which have available variables (mean or standard deviations 
+tidy - data frame with dimension 180x81 with all calculated means and standard deviations
+
+tidy.txt - New output file with final cleaned data
